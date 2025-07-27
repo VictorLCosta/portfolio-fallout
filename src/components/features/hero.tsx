@@ -1,3 +1,7 @@
+import teste from "@/assets/teste.jpg";
+
+import { PixelLoadingImage } from "../ui/pixalated-image";
+
 export function Hero() {
   return (
     <section
@@ -35,11 +39,7 @@ export function Hero() {
       </div>
 
       <div className="relative w-full flex items-center justify-center">
-        <img
-          src="/images/hero-image.png"
-          alt="Victor Lima Costa"
-          className=""
-        />
+        <PixelLoadingImage src={teste} />
       </div>
     </section>
   );
