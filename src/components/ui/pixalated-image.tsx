@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useOnScreen } from "@/hooks/useOnScreen";
 import { cn } from "@/utils/cn";
@@ -10,6 +10,7 @@ export type PixelLoadingImageProps = {
 
 export function PixelLoadingImage({ src, className }: PixelLoadingImageProps) {
   const [ref, isVisible] = useOnScreen<HTMLDivElement>();
+  const [loaded, setLoaded] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imageRef = useRef<HTMLImageElement>(new Image());
 
@@ -17,17 +18,17 @@ export function PixelLoadingImage({ src, className }: PixelLoadingImageProps) {
     `bg-[url('${src}')]`,
     isVisible && "opacity-100",
     !isVisible && "opacity-0",
-    "relative bg-cover",
+    "relative bg-cover flex w-full h-full",
     className,
   );
 
   useEffect(() => {
-    if (isVisible) {
+    if (isVisible && !loaded) {
       const canvasWrap = ref.current!;
       const canvas = canvasRef.current!;
       const image = imageRef.current!;
-      let imgRatio = 0;
       const pxFactorValues = [1, 2, 4, 9, 100];
+      let imgRatio = 0;
       let pxIndex = 0;
 
       const ctx = canvas.getContext("2d");
@@ -118,16 +119,17 @@ export function PixelLoadingImage({ src, className }: PixelLoadingImageProps) {
 
       image.src = src;
       image.onload = () => {
-        imgRatio = image.width / image.height;
-        canvas.width = 300;
-        canvas.height = canvas.width / imgRatio;
+        const imgWidth = image.width;
+        const imgHeight = image.height;
+        imgRatio = imgWidth / imgHeight;
 
         setCanvasSize();
         render();
         animatePixels();
+        setLoaded(true);
       };
     }
-  }, [isVisible]);
+  }, [isVisible, loaded]);
 
   return (
     <div ref={ref} className={styles}>

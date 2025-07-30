@@ -1,6 +1,13 @@
 import { ReactLenis } from "lenis/react";
 
-import { Header, Footer, Hero, Experience, Projects } from "@/components";
+import {
+  Header,
+  Footer,
+  Hero,
+  Experience,
+  Projects,
+  Contact,
+} from "@/components";
 
 function App() {
   return (
@@ -11,6 +18,7 @@ function App() {
         <Hero />
         <Experience />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </>
