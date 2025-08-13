@@ -6,4 +6,4 @@ export * from "./features/hero";
 export * from "./features/projects";
 
 export * from "./ui/button";
-export * from "./ui/pixalated-image";
+export * from "./ui/magnetic-wrapper";

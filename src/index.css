@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --color-green-text: #33FF33;
-  --color-green-bg: #05321e;
-}
-
 @font-face {
   font-family: 'monofonto';
   src: url('/fonts/monofonto.otf') format('opentype');
@@ -12,49 +7,48 @@
   font-style: normal;
 }
 
-@layer components {
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    text-align: center;
-    color: #000;
-    background-color: var(--color-green-text);
-    mix-blend-mode: screen;
-    border: 0;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
+@font-face {
+  font-family: 'technology';
+  src: url('/fonts/Technology.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    &:hover {
-      background-color: transparent;
-      outline: 1px solid var(--color-green-text);
-      color: var(--color-green-text);
+@font-face {
+  font-family: 'technology';
+  src: url('/fonts/Technology-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'technology';
+  src: url('/fonts/Technology-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'technology';
+  src: url('/fonts/Technology-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@theme {
+  --color-text: #2a9d00;
+  --color-bg: #0c0c0c;
+  --font-techno: "technology", sans-serif;
+  --animate-blink: blink 1s step-start infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
     }
   }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-lg);
-    border: solid 1px var(--color-green-text);
-    pointer-events: none;
-    overflow: hidden;
-    padding: .5rem .9rem;
-    width: fit-content;
-  }
 }
 
-body {
-  font-family: 'monofonto', monospace, sans-serif;
-}
-
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
+.panel {
+  min-width: 100vw;
+  min-height: 100vh;
 }

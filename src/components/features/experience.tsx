@@ -1,12 +1,12 @@
 export function Experience() {
   return (
-    <section id="experience" className="container mx-auto md:pt-32">
+    <section id="experience" className="container pt-24 mx-auto md:pt-32">
       <h2 className="text-center tracking-tight text-6xl text-balance">
         My Experience
       </h2>
 
-      <div className="relative w-full mx-auto mt-20">
-        <div className="flex flex-col w-full md:gap-10 max-w-7xl">
+      <div className="relative w-full flex justify-center mx-auto mt-32">
+        <div className="flex flex-col w-full md:gap-16 max-w-7xl">
           <article className="flex items-start justify-between">
             <div className="w-full lg:max-w-sm">
               <div className="w-full flex flex-col gap-y-3 text-sm font-light">
