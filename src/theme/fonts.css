@@ -39,3 +39,17 @@
   font-weight: 700;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'unison';
+  src: url('/fonts/Unison-Pro-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'unison';
+  src: url('/fonts/Unison-Pro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -8,7 +8,7 @@ export function Contact() {
       className="panel relative mx-auto flex justify-center"
     >
       <div className="flex flex-col gap-y-2 justify-center items-center text-center w-full h-full">
-        <h2 className="text-center text-4xl text-balance tracking-wide md:text-6xl text-yellowish">
+        <h2 className="text-center text-4xl text-balance tracking-wide md:text-5xl font-bold text-yellowish font-unison">
           FROM CONCEPT TO CREATION <br /> LET&apos;s MAKE IT HAPPEN!
         </h2>
         <MagneticWrapper className="my-12">
