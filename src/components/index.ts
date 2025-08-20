@@ -7,3 +7,4 @@ export * from "./features/projects";
 
 export * from "./ui/button";
 export * from "./ui/magnetic-wrapper";
+export * from "./ui/text-hover-effect";

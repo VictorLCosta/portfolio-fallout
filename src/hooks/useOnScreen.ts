@@ -18,6 +18,17 @@ export function useOnScreen<T extends Element>(
 
     observer.observe(ref.current);
 
+    const rect = ref.current.getBoundingClientRect();
+    if (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    ) {
+      setIsVisible(true);
+    }
+
     return () => observer.disconnect();
   }, [options]);
 

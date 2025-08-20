@@ -1,9 +1,11 @@
+import eu from "@/assets/images/eu.png";
+
 export function Hero() {
   return (
-    <section id="hero" className="panel mx-auto min-w-7xl">
-      <div className="flex items-center justify-center gap-x-28 w-full">
+    <section id="hero" className="panel relative mx-auto flex justify-center">
+      <div className="container flex items-center justify-center gap-x-28 h-full">
         <div className="relative flex flex-col">
-          <div className="text-6xl font-bold">
+          <div className="text-6xl font-extrabold text-yellowish">
             Hello, I&apos;m Victor, <br />a creative engineer
           </div>
           <p className="tracking-wider mt-12 text-lg">
@@ -32,7 +34,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="cyber-container">
+          <img src={eu} alt="eu" className="w-220 pixelated-loading" />
         </div>
       </div>
     </section>

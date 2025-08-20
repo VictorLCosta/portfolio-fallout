@@ -3,12 +3,15 @@ import { MagneticWrapper } from "../ui/magnetic-wrapper";
 
 export function Contact() {
   return (
-    <section id="contact" className="panel relative w-full mx-auto mt-40 px-4">
-      <div className="flex flex-col gap-y-2 justify-center items-center text-center">
-        <h2 className="text-center text-4xl text-balance tracking-wide md:text-6xl">
+    <section
+      id="contact"
+      className="panel relative mx-auto flex justify-center"
+    >
+      <div className="flex flex-col gap-y-2 justify-center items-center text-center w-full h-full">
+        <h2 className="text-center text-4xl text-balance tracking-wide md:text-6xl text-yellowish">
           FROM CONCEPT TO CREATION <br /> LET&apos;s MAKE IT HAPPEN!
         </h2>
-        <MagneticWrapper className="min-h-[150px] min-w-[200px]">
+        <MagneticWrapper className="my-12">
           <Button type="button">Get In Touch</Button>
         </MagneticWrapper>
         <p className="text-center tracking-wide font-semibold lg:text-2xl">

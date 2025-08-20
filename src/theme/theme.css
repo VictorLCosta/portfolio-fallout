@@ -1,0 +1,14 @@
+@theme {
+  --color-electric-green: #00ff00;
+  --color-raisin-black: #0c0c0c;
+  --color-cardinal: #CB2038;
+  --color-yellowish: #f2e9d0;
+  --font-techno: "technology", sans-serif;
+  --animate-blink: blink 1s step-start infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}

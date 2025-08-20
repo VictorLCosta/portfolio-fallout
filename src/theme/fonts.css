@@ -1,8 +1,13 @@
-@import "tailwindcss";
+@font-face {
+  font-family: '3270-Regular';
+  src: url('/fonts/3270-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'monofonto';
-  src: url('/fonts/monofonto.otf') format('opentype');
+  font-family: '3270Condensed-Regular';
+  src: url('/fonts/3270Condensed-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,22 +38,4 @@
   src: url('/fonts/Technology-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
-}
-
-@theme {
-  --color-text: #2a9d00;
-  --color-bg: #0c0c0c;
-  --font-techno: "technology", sans-serif;
-  --animate-blink: blink 1s step-start infinite;
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-}
-
-.panel {
-  min-width: 100vw;
-  min-height: 100vh;
 }

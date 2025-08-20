@@ -1,0 +1,13 @@
+@utility hover-effect {
+  position: relative;
+  font-kerning: none;
+  white-space: nowrap;
+
+  .char {
+    position: relative;
+  }
+
+  .word {
+    white-space: nowrap;
+  }
+}

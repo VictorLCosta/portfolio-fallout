@@ -2,12 +2,14 @@ import React from "react";
 
 import { cn } from "@/utils/cn";
 
+import { TextHoverEffect } from "./text-hover-effect";
+
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, type, ...props }, forwardedRef) => {
     const classes = cn(
-      "group relative inline-flex w-fit cursor-pointer justify-center items-center overflow-hidden py-3 px-6 border border-black",
+      "group relative inline-flex w-fit font-bold cursor-pointer justify-center items-center overflow-hidden py-3 px-6 border-2 border-text hover:bg-electric-green hover:text-raisin-black",
       className,
     );
 
@@ -18,7 +20,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={classes}
         {...props}
       >
-        {children}
+        <TextHoverEffect>{children}</TextHoverEffect>
       </button>
     );
   },

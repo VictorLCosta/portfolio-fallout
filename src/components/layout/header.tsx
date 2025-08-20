@@ -1,35 +1,54 @@
 import { useLenis } from "lenis/react";
 
+import { TextHoverEffect } from "../ui/text-hover-effect";
+
 export function Header() {
   const lenis = useLenis();
 
   return (
-    <header className="fixed top-0 bottom-auto w-full bg-transparent p-5 z-50">
+    <header className="fixed top-0 bottom-auto w-full bg-transparent p-5 z-50 border-b border-b-electric-green">
       <nav className="container mx-auto flex justify-between">
         <h1>&gt; VERSION 1.1</h1>
-        <ul className="lg:flex items-center space-x-7">
+        <ul className="lg:flex items-center space-x-10">
           <li>
-            <button type="button" onClick={() => lenis?.scrollTo("#hero")}>
+            <TextHoverEffect
+              as="button"
+              type="button"
+              onClick={() => lenis?.scrollTo("#hero")}
+              className="cursor-pointer"
+            >
               Home
-            </button>
+            </TextHoverEffect>
           </li>
           <li>
-            <button
+            <TextHoverEffect
+              as="button"
               type="button"
               onClick={() => lenis?.scrollTo("#experience")}
+              className="cursor-pointer"
             >
               Experience
-            </button>
+            </TextHoverEffect>
           </li>
           <li>
-            <button type="button" onClick={() => lenis?.scrollTo("#projects")}>
+            <TextHoverEffect
+              as="button"
+              type="button"
+              onClick={() => lenis?.scrollTo("#projects")}
+              className="cursor-pointer"
+            >
               Projects
-            </button>
+            </TextHoverEffect>
           </li>
           <li>
-            <button type="button" onClick={() => lenis?.scrollTo("#contact")}>
+            <TextHoverEffect
+              as="button"
+              type="button"
+              onClick={() => lenis?.scrollTo("#contact")}
+              className="cursor-pointer"
+            >
               Contact
-            </button>
+            </TextHoverEffect>
           </li>
         </ul>
         <div>

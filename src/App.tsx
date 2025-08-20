@@ -4,14 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 import { useRef } from "react";
 
-import {
-  Header,
-  Footer,
-  Hero,
-  Experience,
-  Projects,
-  Contact,
-} from "@/components";
+import { Header, Footer, Hero, Contact } from "@/components";
 
 import type { LenisRef } from "lenis/react";
 
@@ -58,7 +51,7 @@ function App() {
     <>
       <ReactLenis root ref={lenisRef} />
       <Header />
-      <main ref={mainRef} className="!h-screen">
+      <main ref={mainRef} className="!h-screen crt">
         <div ref={sliderRef} className="flex max-w-max">
           <Hero />
           <Contact />
