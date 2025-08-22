@@ -2,14 +2,44 @@
   --color-electric-green: #00ff00;
   --color-raisin-black: #0c0c0c;
   --color-cardinal: #CB2038;
-  --color-yellowish: #f2e9d0;
+  --color-yellowish: #fff;
   --font-techno: "technology", sans-serif;
   --font-unison: "unison", sans-serif;
   --animate-blink: blink 1s step-start infinite;
+  --animate-blink-box: blink-box 0.2s steps(4) 0s 4 normal none running;
+  --animate-stream-title: stream-title 4s infinite linear;
+  --animate-expand: expand 2s ease-in-out 0.3s forwards;
+
+  @keyframes expand {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc-size(auto);
+    }
+  }
+
+  @keyframes stream-title {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
   @keyframes blink {
     50% {
       opacity: 0;
+    }
+  }
+
+  @keyframes blink-box {
+    0% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
     }
   }
 

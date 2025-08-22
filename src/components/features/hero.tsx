@@ -1,5 +1,7 @@
 import eu from "@/assets/images/eu.png";
 
+import { Card } from "../ui/card";
+
 export function Hero() {
   return (
     <section id="hero" className="panel relative mx-auto flex justify-center">
@@ -34,9 +36,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="cyber-container">
-          <img src={eu} alt="eu" className="w-220 pixelated-loading" />
-        </div>
+        <Card className="w-200">
+          <Card.Header>
+            <b className="uppercase">C:\ Chrome </b>
+            <span className="px-2">&lt;BEHOLD&gt;</span>
+          </Card.Header>
+          <Card.Content>
+            <Card.Image src={eu} alt="eu" subtitle="our founder" />
+          </Card.Content>
+        </Card>
       </div>
     </section>
   );

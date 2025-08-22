@@ -1,7 +1,22 @@
+@utility animation-delay {
+  animation-delay: 2s;
+}
+
+@utility cyber-clipath {
+  clip-path: polygon(
+    -15px 0%,
+    calc(100% + 15px) 0%,
+    calc(100% + 15px) 100%,
+    20px 100%,
+    -15px calc(100% - 35px)
+  );
+}
+
 @utility hover-effect {
   position: relative;
   font-kerning: none;
   white-space: nowrap;
+  text-shadow: inherit;
 
   .char {
     position: relative;
