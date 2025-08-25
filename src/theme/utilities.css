@@ -1,0 +1,18 @@
+@utility absolute-center {
+  display: flex;
+}
+
+@utility hover-effect {
+  position: relative;
+  font-kerning: none;
+  white-space: nowrap;
+  text-shadow: inherit;
+
+  .char {
+    position: relative;
+  }
+
+  .word {
+    white-space: nowrap;
+  }
+}

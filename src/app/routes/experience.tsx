@@ -1,5 +1,7 @@
+import { Panel } from "@/components/ui/panel";
+
 export default function Experience() {
   return (
-    <div>Experience</div>
+    <Panel>Experience</Panel>
   )
 }
