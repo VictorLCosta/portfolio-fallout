@@ -34,11 +34,8 @@ Card.Image = function CardImage({
     <div className="relative">
       <img src={src} alt={alt} className="grayscale" />
       {subtitle && (
-        <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden hidden group-hover:block">
+        <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden hidden group-hover:block group-hover:border-8 group-hover:border-cardinal">
           <span className="absolute top-[37%] pl-[150%] whitespace-nowrap text-6xl text-center text-cardinal font-unison font-bold text-shadow-none select-none animate-stream-title">
-            {subtitle}
-          </span>
-          <span className="absolute top-[37%] pl-[150%] whitespace-nowrap text-6xl text-center text-cardinal font-unison font-bold text-shadow-none select-none animate-stream-title animation-delay">
             {subtitle}
           </span>
         </div>

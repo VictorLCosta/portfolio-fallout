@@ -6,7 +6,7 @@
 @import "./utilities.css";
 
 body {
-  font-family: '3270-Regular', sans-serif;
+  font-family: '3270-Regular', monospace;
 
   background-color: #000;
   color: var(--color-electric-green);

@@ -1,3 +1,7 @@
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { useState } from "react";
+import { ImFolder } from "react-icons/im";
+
 import teste from "@/assets/images/teste.jpg";
 import type { Project } from "@/models";
 
@@ -19,7 +23,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    name: "Portfolio Website",
+    name: "Portfolio Website 2",
     description: "A personal portfolio website to showcase my work.",
     features: [
       "Responsive design",
@@ -32,7 +36,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    name: "Portfolio Website",
+    name: "Portfolio Website 3",
     description: "A personal portfolio website to showcase my work.",
     features: [
       "Responsive design",
@@ -72,17 +76,40 @@ const projects: Project[] = [
 ];
 
 export function Projects() {
-  return (
-    <section id="projects" className="container mx-auto py-36">
-      <h2 className="text-center mb-20 tracking-tight text-6xl text-balance">
-        My Projects
-      </h2>
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-      <div className="flex">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+  return (
+    <section
+      id="projects"
+      className="panel relative mx-auto flex justify-center"
+    >
+      <TabGroup
+        className="container flex items-center h-full"
+        selectedIndex={selectedIndex}
+        onChange={setSelectedIndex}
+      >
+        <TabList className="h-full flex flex-1/2 items-center justify-center flex-col gap-6">
+          <Tab className="cursor-pointer">
+            <ImFolder className="size-20" />
+            <h1>portfolio</h1>
+          </Tab>
+          <Tab className="cursor-pointer">
+            <ImFolder className="size-20" />
+            <h1>portfolio</h1>
+          </Tab>
+          <Tab className="cursor-pointer">
+            <ImFolder className="size-20" />
+            <h1>portfolio</h1>
+          </Tab>
+        </TabList>
+        <TabPanels className="h-full flex flex-1/2 items-center justify-center">
+          {projects.map((p) => (
+            <TabPanel key={p.id} className="-translate-y-[7%]">
+              <ProjectCard project={p} />
+            </TabPanel>
+          ))}
+        </TabPanels>
+      </TabGroup>
     </section>
   );
 }
