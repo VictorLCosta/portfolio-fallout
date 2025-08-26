@@ -1,5 +1,7 @@
+import { Panel } from "@/components/ui/panel";
+
 export default function Home() {
   return (
-    <div>Tamo aqui vivo</div>
+    <Panel>Tamo aqui vivo</Panel>
   )
 }

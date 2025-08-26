@@ -4,30 +4,59 @@
 @import "./theme.css";
 @import "./utilities.css";
 
-.crt::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
+body {
+  font-family: '3270-Regular', monospace;
 }
+
+.crt {
+  position: relative;
+  background: black;
+  color: var(--color-electric-green);
+  overflow: hidden;
+}
+
+/* Scanlines */
 .crt::before {
-  content: " ";
-  display: block;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 2px,
+    transparent 3px
+  );
   pointer-events: none;
+  z-index: 2;
+}
+
+/* Glow + chromatic aberration */
+.crt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  mix-blend-mode: screen;
+  filter: blur(2px) contrast(1.2) saturate(1.2);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+.crt {
+  animation: flicker 0.15s infinite;
 }
