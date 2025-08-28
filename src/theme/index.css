@@ -13,6 +13,7 @@ body {
   background: black;
   color: var(--color-electric-green);
   overflow: hidden;
+  text-shadow: 0 0px 3px currentColor;
 }
 
 /* Scanlines */
@@ -53,7 +54,7 @@ body {
 /* Flicker animation */
 @keyframes flicker {
   0% { opacity: 1; }
-  50% { opacity: 0.95; }
+  50% { opacity: 0.91; }
   100% { opacity: 1; }
 }
 

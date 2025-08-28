@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'NCLRabegs';
+  src: url('/fonts/NCLRabegs.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: '3270-Regular';
   src: url('/fonts/3270-Regular.otf') format('opentype');
   font-weight: normal;

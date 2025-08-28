@@ -19,14 +19,14 @@ export function Panel<C extends React.ElementType = "section">({
 }: Props<C>) {
   const Component = as || "section";
 
-  const styles = cn(
-    "relative w-screen h-screen",
-    `grid grid-cols-${cols}`,
-    className,
-  );
+  const styles = cn("relative w-screen h-screen grid", className);
 
   return (
-    <Component className={styles} {...restProps}>
+    <Component
+      className={styles}
+      style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+      {...restProps}
+    >
       {children}
     </Component>
   );
