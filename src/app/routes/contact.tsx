@@ -14,7 +14,7 @@ export default function Contact() {
         <h2 className="text-center text-4xl text-balance tracking-wide md:text-5xl font-bold text-white font-nclr">
           FROM CONCEPT TO CREATION <br /> LET&apos;s MAKE IT HAPPEN!
         </h2>
-        <MagneticWrapper className="my-12">
+        <MagneticWrapper className="my-16">
           <Button type="button">Get In Touch</Button>
         </MagneticWrapper>
         <p className="text-center tracking-wide font-semibold lg:text-2xl">

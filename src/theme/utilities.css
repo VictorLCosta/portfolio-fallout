@@ -1,5 +1,5 @@
-@utility absolute-center {
-  display: flex;
+@utility animation-delay-2000 {
+  animation-delay: 2s;
 }
 
 @utility hover-effect {
@@ -19,4 +19,12 @@
 
 @utility cyber-clipath1 {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+@utility tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
 }

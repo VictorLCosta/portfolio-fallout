@@ -54,7 +54,7 @@ body {
 /* Flicker animation */
 @keyframes flicker {
   0% { opacity: 1; }
-  50% { opacity: 0.91; }
+  50% { opacity: 0.96; }
   100% { opacity: 1; }
 }
 

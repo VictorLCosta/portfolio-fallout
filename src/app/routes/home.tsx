@@ -1,9 +1,10 @@
-import eu from "@/assets/eu.webp";
+import eu from "@/assets/eu.png";
 import { Panel } from "@/components/ui/panel";
+import { StreamText } from "@/components/ui/stream-text";
 
 export default function Home() {
   return (
-    <Panel className="mx-auto container">
+    <Panel className="place-items-center mx-auto container">
       <div className="col-span-8 flex flex-col">
         <div className="text-5xl font-bold text-white font-nclr">
           Hello, I&apos;m Victor, <br />a creative engineer
@@ -33,8 +34,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="col-span-4">
-        <img src={eu} alt="" className="max-w-95" />
+      <div className="relative col-span-3 col-start-10">
+        <img src={eu} alt="" />
+        <StreamText text="our founder" />
       </div>
     </Panel>
   );

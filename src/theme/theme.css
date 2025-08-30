@@ -3,4 +3,15 @@
   --color-crimson: #F20505;
 
   --font-nclr: "NCLRabegs", monospace;
+
+  --animate-stream-title: stream-title 5s linear infinite;
+
+  @keyframes stream-title {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
