@@ -6,26 +6,46 @@ export function Header() {
   return (
     <header className="fixed top-0 bottom-auto w-full bg-transparent p-4 z-50 border-b border-b-electric-green">
       <nav className="container mx-auto flex justify-between">
-        <h1>&gt; VERSION 1.1</h1>
+        <h1>&gt; VERSION 2.48472</h1>
         <ul className="lg:flex items-center space-x-10">
           <li>
             <NavLink to="/">
-              <TextHoverEffect as="span">Home</TextHoverEffect>
+              <TextHoverEffect
+                as="span"
+                className="uppercase font-bold tracking-wide"
+              >
+                Home
+              </TextHoverEffect>
             </NavLink>
           </li>
           <li>
             <NavLink to="/experience">
-              <TextHoverEffect as="span">Experience</TextHoverEffect>
+              <TextHoverEffect
+                as="span"
+                className="uppercase font-bold tracking-wide"
+              >
+                Experience
+              </TextHoverEffect>
             </NavLink>
           </li>
           <li>
             <NavLink to="/projects">
-              <TextHoverEffect as="span">Projects</TextHoverEffect>
+              <TextHoverEffect
+                as="span"
+                className="uppercase font-bold tracking-wide"
+              >
+                Projects
+              </TextHoverEffect>
             </NavLink>
           </li>
           <li>
             <NavLink to="/contact">
-              <TextHoverEffect as="span">Contact</TextHoverEffect>
+              <TextHoverEffect
+                as="span"
+                className="uppercase font-bold tracking-wide"
+              >
+                Contact
+              </TextHoverEffect>
             </NavLink>
           </li>
         </ul>

@@ -3,8 +3,16 @@
   --color-crimson: #F20505;
 
   --font-nclr: "NCLRabegs", monospace;
+  --font-techno: "technology", sans-serif;
 
   --animate-stream-title: stream-title 5s linear infinite;
+  --animate-blink: blink 1s step-start infinite;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 
   @keyframes stream-title {
     0% {

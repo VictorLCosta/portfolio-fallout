@@ -1,0 +1,14 @@
+@layer components {
+  .btn-icon {
+    cursor: pointer;
+    padding: .2rem;
+    border: solid 1px black;
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @import "./fonts.css";
 @import "./theme.css";
 @import "./utilities.css";
+@import "./components.css";
 
 body {
   font-family: '3270-Regular', monospace;
